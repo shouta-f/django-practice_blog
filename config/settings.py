@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'account.apps.AccountConfig',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,4 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
